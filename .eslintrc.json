@@ -1,0 +1,12 @@
+{
+    "extends": "airbnb",
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "no-console": 0,
+        "strict": 0,
+        "indent": [2, 4, {"SwitchCase": 1}],
+        "no-proto": 0
+    }
+}
