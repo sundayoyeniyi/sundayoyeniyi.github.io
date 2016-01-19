@@ -1,0 +1,24 @@
+{
+  "name": "sundayoyeniyi.github.io",
+  "version": "0.0.1",
+  "description": "Github profile page",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sundayoyeniyi/sundayoyeniyi.github.io.git"
+  },
+  "keywords": [
+    "Github",
+    "profile",
+    "page"
+  ],
+  "author": "Sunday Oyeniyi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sundayoyeniyi/sundayoyeniyi.github.io/issues"
+  },
+  "homepage": "https://github.com/sundayoyeniyi/sundayoyeniyi.github.io#readme"
+}
