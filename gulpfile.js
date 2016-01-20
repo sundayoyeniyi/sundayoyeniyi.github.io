@@ -29,8 +29,19 @@ gulp.task('sass-watch', function sassWatch() {
     gulp.watch(config.scssSource, { debounceDelay: 50000 }, ['sass-compile']);
 });
 
-gulp.task('build', function build() {
-    console.log('build task is **Work in progress...**');
+gulp.task('minify-css', function minifycss() {
+    return gulp
+        .src(config.cssSource)
+        .pipe(plugins.plumber({
+            handleError: errorHandler,
+        }))
+        .pipe(plugins.cssnano())
+        .pipe(plugins.plumber.stop())
+        .pipe(gulp.dest(config.buildStyles));
+});
+
+gulp.task('build', ['minify-css'], function build() {
+    console.log('build task completed ....');
 });
 
 gulp.task('watch', ['sass-watch']);
