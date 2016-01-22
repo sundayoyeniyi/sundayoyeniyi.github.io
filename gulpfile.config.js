@@ -10,6 +10,10 @@ module.exports = function exports() {
         cssSource: styles + '**/*.css',
         buildOut: build,
         buildStyles: build + 'styles',
+        devStyles: styles + 'styles.css',
+        stylesheets: build + 'styles/styles.css',
+        htmlSource: './src/index.html',
+        htmlDest: '.',
     };
     return config;
 };

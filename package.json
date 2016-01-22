@@ -22,11 +22,13 @@
   },
   "homepage": "https://github.com/sundayoyeniyi/sundayoyeniyi.github.io#readme",
   "devDependencies": {
+    "browser-sync": "^2.11.1",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^3.1.0",
     "eslint-plugin-react": "^3.15.0",
     "gulp": "^3.9.0",
     "gulp-cssnano": "^2.1.0",
+    "gulp-inject": "^3.0.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.1.1"
