@@ -1,1 +1,28 @@
 @import "partials/reset";
+@import "partials/variables";
+
+body {
+    font-family: $sitefont;
+    font-size: $sitefontsize;
+}
+
+section {
+    margin-bottom: 12px;
+    h1 {
+    font-size: $sectionheadersize;
+}
+}
+
+hgroup {
+    line-height: 1;
+    h1 {
+        font-size: $sitefontsize * 1.4;
+    }
+    h2 {
+        font-size: $sitefontsize * 0.8;
+    }
+}
+
+a {
+    text-decoration: none;
+}
