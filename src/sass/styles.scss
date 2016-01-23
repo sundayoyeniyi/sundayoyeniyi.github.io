@@ -4,25 +4,41 @@
 body {
     font-family: $sitefont;
     font-size: $sitefontsize;
+    color: #333333;
+    line-height: 1.618;
+}
+
+hgroup {
+    line-height: 1;
+    h1 {
+        font-size: $brandfontsize;
+        font-weight: bold;
+        color: $brandcolor;
+        text-transform: capitalize;
+    }
+    h2 {
+        font-size: $brandbyline;
+        font-weight: bold;
+        color: $brandbylinecolor;
+    }
+}
+
+article > header {
+    margin-bottom: 12px;
+    border-bottom: thick solid $brandcolor;
 }
 
 section {
     margin-bottom: 12px;
     h1 {
     font-size: $sectionheadersize;
-}
+    color: $sectionheadercolor;
+    }
 }
 
-hgroup {
-    line-height: 1;
-    h1 {
-        font-size: $sitefontsize * 1.4;
-    }
-    h2 {
-        font-size: $sitefontsize * 0.8;
-    }
-}
+
 
 a {
     text-decoration: none;
+    color: $anchorcolor;
 }

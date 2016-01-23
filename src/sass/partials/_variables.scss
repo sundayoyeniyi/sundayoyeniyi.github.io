@@ -1,4 +1,12 @@
-/* font */
+/*
+ * Size & dimension inspired by the golden ratio - http://www.goldennumber.net
+ */
 $sitefont: 'Open Sans', sans-serif;
-$sitefontsize: 14px;
-$sectionheadersize : $sitefontsize * 1.2;
+$sitefontsize: 18px;
+$sectionheadersize: $sitefontsize * 1.618;
+$brandfontsize: $sitefontsize * 1.618 * 1.618;
+$brandbyline: $sitefontsize / 1.618;
+$sectionheadercolor: #006699;
+$brandcolor: darken($sectionheadercolor, 1.618*1.618%);
+$brandbylinecolor: lighten($sectionheadercolor, 1.618*1.618*1.618%);
+$anchorcolor: $sectionheadercolor;

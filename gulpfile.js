@@ -23,8 +23,7 @@ gulp.task('sass-compile', function sassCompile() {
         }))
         .pipe(plugins.sass())
         .pipe(plugins.plumber.stop())
-        .pipe(gulp.dest(config.scssCompiled))
-        .pipe(browsersync.stream());
+        .pipe(gulp.dest(config.scssCompiled));
 });
 
 gulp.task('minify-css', function minifycss() {
