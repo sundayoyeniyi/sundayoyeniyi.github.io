@@ -15,7 +15,7 @@ function errorHandler(error) {
 /*
  * gulp tasks
  */
-gulp.task('sass-compile', function sassCompile() {
+gulp.task('sass-compile', () => {
     return gulp
         .src(config.scssSource)
         .pipe(plugins.plumber({
@@ -26,7 +26,7 @@ gulp.task('sass-compile', function sassCompile() {
         .pipe(gulp.dest(config.scssCompiled));
 });
 
-gulp.task('minify-css', function minifycss() {
+gulp.task('minify-css', () => {
     return gulp
         .src(config.cssSource)
         .pipe(plugins.plumber({
@@ -37,7 +37,7 @@ gulp.task('minify-css', function minifycss() {
         .pipe(gulp.dest(config.buildStyles));
 });
 
-gulp.task('build', ['minify-css'], function build() {
+gulp.task('build', ['minify-css'], () => {
     return gulp
         .src(config.htmlSource)
         .pipe(plugins.inject(gulp.src(config.stylesheets, { read: false }), {
@@ -46,7 +46,7 @@ gulp.task('build', ['minify-css'], function build() {
         .pipe(gulp.dest(config.htmlDest));
 });
 
-gulp.task('serve-dev', function browserSync() {
+gulp.task('serve-dev', () => {
     browsersync.init({
         server: { baseDir: './src/', index: 'index.html' },
         logLevel: 'debug',

@@ -1,5 +1,5 @@
 'use strict';
-module.exports = function exports() {
+module.exports = () => {
     const source = 'src/sass/';
     const build = 'dist/';
     const styles = 'src/styles/';
