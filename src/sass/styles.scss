@@ -8,24 +8,24 @@ body {
     line-height: 1.618;
 }
 
+body > header {
+    margin-bottom: 12px;
+    border-bottom: thick solid $brandcolor;
+}
+
 hgroup {
     line-height: 1;
+    font-weight: bold;
     h1 {
         font-size: $brandfontsize;
-        font-weight: bold;
         color: $brandcolor;
         text-transform: capitalize;
     }
     h2 {
         font-size: $brandbyline;
-        font-weight: bold;
         color: $brandbylinecolor;
+        text-transform: lowercase;
     }
-}
-
-article > header {
-    margin-bottom: 12px;
-    border-bottom: thick solid $brandcolor;
 }
 
 section {
@@ -33,10 +33,11 @@ section {
     h1 {
     font-size: $sectionheadersize;
     color: $sectionheadercolor;
+        a {
+            text-transform: capitalize;
+        }
     }
 }
-
-
 
 a {
     text-decoration: none;
