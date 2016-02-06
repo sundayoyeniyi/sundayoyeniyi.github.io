@@ -26,6 +26,24 @@ gulp.task('sass-compile', () => {
         .pipe(gulp.dest(config.scssCompiled));
 });
 
+gulp.task('compass-compile', () => {
+    return gulp
+        .src(config.scssSource)
+        .pipe(plugins.plumber({
+            errorHandler: (error) => {
+                console.log(error.message);
+                this.emit('end');
+            },
+        }))
+        .pipe(plugins.compass({
+            css: config.compass.css,
+            sass: config.compass.sass,
+            image: config.compass.image,
+        }))
+        .pipe(plugins.plumber.stop())
+        .pipe(gulp.dest(config.scssCompiled));
+});
+
 gulp.task('minify-css', () => {
     return gulp
         .src(config.cssSource)
@@ -57,7 +75,7 @@ gulp.task('serve-dev', () => {
         injectChanges: true,
         host: 'dev_svr',
     });
-    gulp.watch(config.scssSource, ['sass-compile']);
+    gulp.watch(config.scssSource, ['compass-compile']);
     gulp.watch(config.htmlSource).on('change', browsersync.reload);
     gulp.watch(config.devStyles).on('change', browsersync.reload);
 });

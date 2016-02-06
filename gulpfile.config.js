@@ -14,6 +14,11 @@ module.exports = () => {
         stylesheets: build + 'styles/styles.css',
         htmlSource: './src/index.html',
         htmlDest: '.',
+        compass: {
+            css: styles,
+            sass: source,
+            image: 'src/images/',
+        },
     };
     return config;
 };

@@ -1,3 +1,4 @@
 # exclude files/folders from repo
 node_modules
 src/styles
+.sass-cache

@@ -8,7 +8,11 @@ body {
     line-height: 1.618;
 }
 
-body > header {
+main {
+    padding: 5px * 1.618;
+}
+
+main > header {
     margin-bottom: 12px;
     border-bottom: thick solid $brandcolor;
 }
@@ -20,11 +24,13 @@ hgroup {
         font-size: $brandfontsize;
         color: $brandcolor;
         text-transform: capitalize;
+        margin-bottom: 5px * 1.618;
     }
     h2 {
         font-size: $brandbyline;
         color: $brandbylinecolor;
         text-transform: lowercase;
+        margin-bottom: 5px * 1.618;
     }
 }
 
