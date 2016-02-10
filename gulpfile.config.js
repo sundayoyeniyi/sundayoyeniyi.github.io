@@ -14,10 +14,13 @@ module.exports = () => {
         stylesheets: build + 'styles/styles.css',
         htmlSource: './src/index.html',
         htmlDest: '.',
+        fontSource: './src/fonts/**/*.*',
+        fontDest: build + 'fonts/',
         compass: {
             css: styles,
             sass: source,
             image: 'src/images/',
+            font: 'src/fonts/',
         },
     };
     return config;

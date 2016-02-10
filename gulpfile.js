@@ -39,6 +39,7 @@ gulp.task('compass-compile', () => {
             css: config.compass.css,
             sass: config.compass.sass,
             image: config.compass.image,
+            font: config.compass.font,
         }))
         .pipe(plugins.plumber.stop())
         .pipe(gulp.dest(config.scssCompiled));
@@ -55,7 +56,13 @@ gulp.task('minify-css', () => {
         .pipe(gulp.dest(config.buildStyles));
 });
 
-gulp.task('build', ['minify-css'], () => {
+gulp.task('move-fonts', () => {
+    return gulp
+        .src(config.fontSource)
+        .pipe(gulp.dest(config.fontDest));
+});
+
+gulp.task('build', ['minify-css', 'move-fonts'], () => {
     return gulp
         .src(config.htmlSource)
         .pipe(plugins.inject(gulp.src(config.stylesheets, { read: false }), {
