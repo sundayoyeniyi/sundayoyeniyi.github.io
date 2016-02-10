@@ -1,10 +1,13 @@
 @import "partials/reset";
+@import "partials/compass";
 @import "partials/variables";
+@import "partials/font-family";
+@import "partials/mixins";
 
 body {
     font-family: $sitefont;
     font-size: $sitefontsize;
-    color: #333333;
+    color: $bodycolor;
     line-height: 1.618;
 }
 
@@ -13,24 +16,46 @@ main {
 }
 
 main > header {
+    margin-top: 12px;
     margin-bottom: 12px;
     border-bottom: thick solid $brandcolor;
+    padding-bottom: 2px * 1.618;
 }
 
 hgroup {
     line-height: 1;
     font-weight: bold;
+    font-family: $brandfont;
+    color: $brandcolor;
+    span {
+            font-size: $brandfontsize;
+            border: 2px * 1.618 solid $brandcolor;
+            width: 40px * 1.618;
+            height: 40px * 1.618;
+            padding: 5px;
+            float: left;
+            @include border-radius(50%);
+            background-color: $brandcolor;
+            color: #fff;
+            &:hover {
+                background-color: #fff;
+                color: $brandcolor;
+                border: 2px * 1.618 solid $brandcolor;
+            }
+        }
     h1 {
         font-size: $brandfontsize;
-        color: $brandcolor;
         text-transform: capitalize;
-        margin-bottom: 5px * 1.618;
+        margin-bottom: 2px * 1.618;
+
     }
     h2 {
-        font-size: $brandbyline;
+        font-family: $brandbylinefont;
+        font-size: $brandbylinefontsize;
         color: $brandbylinecolor;
         text-transform: lowercase;
         margin-bottom: 5px * 1.618;
+
     }
 }
 
@@ -41,11 +66,12 @@ section {
     color: $sectionheadercolor;
         a {
             text-transform: capitalize;
+            @include hover-link();
         }
     }
 }
 
 a {
-    text-decoration: none;
     color: $anchorcolor;
+    @include hover-link();
 }

@@ -1,0 +1,27 @@
+/*
+ * Fonts were obtained from Fonts Squirrel and the license for these fonts
+ * can be found here - http://www.fontsquirrel.com/license/Santana
+ */
+@include font-face("santanaregular",
+         font-files('santanaregular/Santana-webfont.woff', woff,
+                    'santanaregular/Santana-webfont.ttf', ttf,
+                    'santanaregular/Santana-webfont.svg#santanaregular', svg),
+                    'santanaregular/Santana-webfont.eot',
+                    'normal',
+                    'normal');
+
+@include font-face("santanabold",
+         font-files('santanabold/Santana-Bold-webfont.woff', woff,
+                    'santanabold/Santana-Bold-webfont.ttf', ttf,
+                    'santanabold/Santana-Bold-webfont.svg#santanabold', svg),
+                    'santanabold/Santana-Bold-webfont.eot',
+                    'bold',
+                    'normal');
+
+@include font-face("santanablack",
+         font-files('santanablack/Santana-Black-webfont.woff', woff,
+                    'santanablack/Santana-Black-webfont.ttf', ttf,
+                    'santanablack/Santana-Black-webfont.svg#santanablack', svg),
+                    'santanablack/Santana-Black-webfont.eot',
+                    'normal',
+                    'normal');
