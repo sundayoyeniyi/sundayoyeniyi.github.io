@@ -47,7 +47,6 @@ hgroup {
         font-size: $brandfontsize;
         text-transform: capitalize;
         margin-bottom: 2px * 1.618;
-
     }
     h2 {
         font-family: $brandbylinefont;
@@ -55,7 +54,6 @@ hgroup {
         color: $brandbylinecolor;
         text-transform: lowercase;
         margin-bottom: 5px * 1.618;
-
     }
 }
 
@@ -74,4 +72,21 @@ section {
 a {
     color: $anchorcolor;
     @include hover-link();
+}
+
+footer {
+    font-family: $brandfont;
+    font-weight: bold;
+    padding: 20px;
+    color: #fff;
+    background-color: $brandcolor;
+    @include border-bottom-radius();
+    div {
+        text-align: right;
+        @include vertical-align();
+        a {
+            @include link-colors(#fff);
+            text-decoration: underline;
+		}
+    }
 }
