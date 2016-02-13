@@ -1,5 +1,1 @@
-@mixin vertical-align($position: relative) {
-  position: $position;
-  top: 50%;
-  @include translateY(-50%);
-}
+/* for common mixins */
