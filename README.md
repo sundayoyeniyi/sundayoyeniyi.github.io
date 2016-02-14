@@ -12,4 +12,6 @@
 | 4  | Turn/change profile page into a basic header, content, aisde, footer page layout (grid + RWD)  | Doing   |
 | 5  | Refactor codebase to client and server mode and host server on heroku.  | To do  |
 | 6  | Refactor page into dynamic contents coming from storage  | To do   |
-| 7  | Improve README documentation  | To do   |
+| 7  | Brand logo in svg  | To do   |
+| 8  | Generate favicon from brand logo  | To do   |
+| 9  | Improve README documentation  | To do   |
