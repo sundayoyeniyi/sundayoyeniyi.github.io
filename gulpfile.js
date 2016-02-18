@@ -40,6 +40,7 @@ gulp.task('compass-compile', () => {
             sass: config.compass.sass,
             image: config.compass.image,
             font: config.compass.font,
+            require: config.compass.require,
         }))
         .pipe(plugins.plumber.stop())
         .pipe(gulp.dest(config.scssCompiled));
