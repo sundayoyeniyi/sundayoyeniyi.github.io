@@ -1,5 +1,5 @@
 @import "partials/reset";
-@import "partials/compass";
+@import "plugins/compass";
 @import "plugins/susy_plugin";
 @import "plugins/breakpoint_plugin";
 @import "partials/variables";
@@ -19,8 +19,7 @@ main {
 }
 
 main > header {
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin: 12px 0 12px 0;
     border-bottom: thick solid $brandcolor;
     padding-bottom: 2px * 1.618;
 }
@@ -30,13 +29,14 @@ hgroup {
     font-weight: bold;
     font-family: $brandfont;
     color: $brandcolor;
+    text-align: center;
     div:first-child {
             font-size: $brandfontsize;
             border: 2px * 1.618 solid $brandcolor;
             width: 40px * 1.618;
             height: 40px * 1.618;
             padding: 5px;
-            float: left;
+            margin: 0 auto 0 auto;
             @include border-radius(50%);
             background-color: $brandcolor;
             color: #fff;
@@ -48,6 +48,7 @@ hgroup {
                 background-color: #fff;
                 color: $brandcolor;
                 border: 2px * 1.618 solid $brandcolor;
+                @include rotateZ(270deg);
             }
         }
     h1 {
