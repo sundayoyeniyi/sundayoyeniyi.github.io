@@ -21,6 +21,7 @@ module.exports = () => {
             sass: source,
             image: 'src/images/',
             font: 'src/fonts/',
+            require: ['susy', 'breakpoint'],
         },
     };
     return config;
