@@ -20,7 +20,7 @@ main {
 
 main > header {
     margin: 12px 0 12px 0;
-    border-bottom: thick solid $brandcolor;
+    border-bottom: thick solid $brandcomplimentarycolor;
     padding-bottom: 2px * 1.618;
 }
 
@@ -32,21 +32,21 @@ hgroup {
     text-align: center;
     div:first-child {
             font-size: $brandfontsize;
-            border: 2px * 1.618 solid $brandcolor;
+            border: 2px * 1.618 solid $brandcomplimentarycolor;
             width: 40px * 1.618;
             height: 40px * 1.618;
             padding: 5px;
             margin: 0 auto 0 auto;
             @include border-radius(50%);
             background-color: $brandcolor;
-            color: #fff;
+            color: $brandcomplimentarycolor;
             span {
                 display: inline-block;
                 @include vertical-align();
             }
             &:hover {
                 background-color: #fff;
-                color: $brandcolor;
+                color: $brandcomplimentarycolor;
                 border: 2px * 1.618 solid $brandcolor;
                 @include rotateZ(270deg);
             }
@@ -87,6 +87,7 @@ footer {
     font-weight: bold;
     padding: 20px;
     color: #fff;
+    border-top: thick solid $brandcomplimentarycolor;
     background-color: $brandcolor;
     @include border-bottom-radius();
     div {
