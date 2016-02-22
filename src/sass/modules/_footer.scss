@@ -1,0 +1,16 @@
+footer {
+    font-family: $brandfont;
+    font-weight: bold;
+    padding: 20px;
+    color: #fff;
+    border-top: thick solid $brandcomplimentarycolor;
+    background-color: $brandcolor;
+    @include border-bottom-radius();
+    div {
+        text-align: right;
+        a {
+            @include link-colors(#fff);
+            text-decoration: underline;
+		}
+    }
+}

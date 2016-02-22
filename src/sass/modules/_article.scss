@@ -1,0 +1,11 @@
+section {
+    margin-bottom: 12px;
+    h1 {
+    font-size: $sectionheadersize;
+    color: $sectionheadercolor;
+        a {
+            text-transform: capitalize;
+            @include hover-link();
+        }
+    }
+}
