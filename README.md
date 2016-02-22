@@ -12,7 +12,7 @@
 | 4  | Refactor index page + sass files to start with mobile first design strategy  | Done   |
 | 5  | Turn/change profile page into a basic header, main (article and aside), footer page layout | Done   |
 | 6  | Brand logo in svg (scripting SVG or just in CSS)  | Done   |
-| 7  | Refactor sass file into module files (header, article, aside, footer)  | To do   |
+| 7  | Refactor sass file into module files (container, header, article, aside, footer)  | Done   |
 | 8  | Add TypeScript and TDD workflow toolings  | To do   |
 | 9  | Add current date to footer  area via tested JavaScript  | To do   |
 | 10  | Develop aside area contents (current time, HTML5, CSS3, JavaScript and NodeJS logos all in scripted SVG formats or using Canvas API)  | To do   |
