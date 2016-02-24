@@ -1,7 +1,8 @@
 main > header {
     margin: 12px 0 12px 0;
     border-bottom: thick solid $brandcomplimentarycolor;
-    padding-bottom: 2px * 1.618;
+    padding: (2px * 1.618)+12px 0;
+    background-color: $brandheaderbackgroundcolor;
 }
 
 hgroup {
@@ -18,6 +19,7 @@ hgroup {
             padding: 5px;
             margin: 0 auto 0 auto;
             @include border-radius(50%);
+            @include rotateZ(-45deg);
             background-color: $brandcolor;
             color: $brandcomplimentarycolor;
             span {
@@ -28,7 +30,7 @@ hgroup {
                 background-color: #fff;
                 color: $brandcomplimentarycolor;
                 border: 2px * 1.618 solid $brandcolor;
-                @include rotateZ(270deg);
+                @include rotateZ(-90deg);
             }
         }
     h1 {
