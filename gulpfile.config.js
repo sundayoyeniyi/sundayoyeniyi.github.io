@@ -23,6 +23,11 @@ module.exports = () => {
             font: 'src/fonts/',
             require: ['susy', 'breakpoint'],
         },
+        typescript: {
+            tscSourcePath: 'src/typescripts/**/*.ts',
+            tscOutputPath: 'src/scripts/',
+            tscClientOptionFile: 'src/typescripts/tsconfig.json',
+        },
     };
     return config;
 };

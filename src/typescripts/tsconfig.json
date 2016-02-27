@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"module": "system",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+		"target": "es5",
+        "outFile": "../scripts/script.js"
+	},
+	"exclude": [
+        "node_modules",
+        "bower_components",
+        "dist",
+        "archive",
+        "test"
+    ]
+}

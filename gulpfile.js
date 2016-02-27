@@ -72,6 +72,18 @@ gulp.task('build', ['minify-css', 'move-fonts'], () => {
         .pipe(gulp.dest(config.htmlDest));
 });
 
+gulp.task('compile-tsScripts', () => {
+    return gulp
+        .src(config.typescript.tscSourcePath)
+        .pipe(plugins.changed(config.typescript.tscOutputPath))
+        .pipe(plugins.plumber())
+        .pipe(plugins.sourcemaps.init())
+		.pipe(plugins.typescript(config.typescript.tscClientOptionFile))
+		.pipe(plugins.sourcemaps.write('.'))
+        .pipe(plugins.plumber.stop())
+		.pipe(gulp.dest(config.typescript.tscOutputPath));
+});
+
 gulp.task('serve-dev', () => {
     browsersync.init({
         server: { baseDir: './src/', index: 'index.html' },
