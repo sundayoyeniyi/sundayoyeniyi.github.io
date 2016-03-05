@@ -84,6 +84,7 @@ gulp.task('serve-dev', () => {
         host: 'dev_svr',
     });
     gulp.watch(config.scssSource, ['compass-compile']);
+    gulp.watch(config.scriptSource).on('change', browsersync.reload);
     gulp.watch(config.htmlSource).on('change', browsersync.reload);
     gulp.watch(config.devStyles).on('change', browsersync.reload);
 });

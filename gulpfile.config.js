@@ -12,6 +12,7 @@ module.exports = () => {
         buildStyles: build + 'styles',
         devStyles: styles + 'styles.css',
         stylesheets: build + 'styles/styles.css',
+        scriptSource: './src/scripts/**/*.js',
         htmlSource: './src/index.html',
         htmlDest: '.',
         fontSource: './src/fonts/**/*.*',
