@@ -2,6 +2,11 @@
 node_modules
 src/styles
 .sass-cache
+*.log
+typings
+build/
 
 # exclude JavaScripts generated from typescripts
 src/scripts
+spec/scripts
+test/scripts
