@@ -1,0 +1,13 @@
+{
+  "name": "sundayoyeniyi.github.io",
+  "version": false,
+  "ambientDependencies": {
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
+    "gulp": "github:DefinitelyTyped/DefinitelyTyped/gulp/gulp.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
+    "orchestrator": "github:DefinitelyTyped/DefinitelyTyped/orchestrator/orchestrator.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
+    "Q": "github:DefinitelyTyped/DefinitelyTyped/q/Q.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
+    "mocha": "github:DefinitelyTyped/DefinitelyTyped/mocha/mocha.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
+    "assertion-error": "github:DefinitelyTyped/DefinitelyTyped/assertion-error/assertion-error.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
+    "chai": "github:DefinitelyTyped/DefinitelyTyped/chai/chai.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313"
+  }
+}
