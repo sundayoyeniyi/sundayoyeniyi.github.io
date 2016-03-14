@@ -6,7 +6,10 @@ footer {
     border-top: thick solid $brandcomplimentarycolor;
     background-color: $brandcolor;
     @include border-bottom-radius();
-    div {
+    div:first-child {
+        float: left;
+    }
+    div:last-child {
         text-align: right;
         a {
             @include link-colors(#fff);
