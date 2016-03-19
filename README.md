@@ -1,5 +1,7 @@
 # Introduction
 
+[![Build Status](https://travis-ci.org/sundayoyeniyi/sundayoyeniyi.github.io.svg?branch=master)](https://travis-ci.org/sundayoyeniyi/sundayoyeniyi.github.io)
+
 > This is a profile repo and largely a work in progress until the task below is completed and replaced with a README documentation.
 
 ## Task list and status
