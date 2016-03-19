@@ -1,1 +1,0 @@
-function getDate(){"use strict";return new Date}window.onload=function(){var e=document.querySelector("footer div:first-child");e.innerText=getDate()};
