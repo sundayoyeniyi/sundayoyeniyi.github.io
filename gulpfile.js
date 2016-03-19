@@ -48,70 +48,91 @@ gulp.task('compass-compile', () => {
 
 gulp.task('minify-css', () => {
     return gulp
-        .src(config.cssSource)
+        .src(config.stylesheets)
         .pipe(plugins.plumber({
             handleError: errorHandler,
         }))
         .pipe(plugins.cssnano())
         .pipe(plugins.plumber.stop())
-        .pipe(gulp.dest(config.buildStyles));
+        .pipe(gulp.dest(config.distStyles));
 });
 
 gulp.task('minify-js', () => {
     return gulp
-        .src(config.jsSource)
+        .src(config.javascript)
         .pipe(plugins.plumber({
             handleError: errorHandler,
         }))
         .pipe(plugins.uglify())
         .pipe(plugins.plumber.stop())
-        .pipe(gulp.dest(config.buildScript));
+        .pipe(gulp.dest(config.distScript));
 });
 
-gulp.task('move-fonts', () => {
+gulp.task('build-fonts', () => {
     return gulp
         .src(config.fontSource)
-        .pipe(gulp.dest(config.fontDest));
+        .pipe(gulp.dest(config.buildFonts));
 });
 
-gulp.task('compile-src', () => {
+gulp.task('dist-fonts', () => {
     return gulp
-        .src(config.typescript.tscSourcePath)
-        .pipe(plugins.changed(config.typescript.tscOutputPath))
-        .pipe(plugins.plumber())
-        .pipe(plugins.sourcemaps.init())
-		.pipe(plugins.typescript(config.typescript.tscClientOptionFile))
-		.pipe(plugins.sourcemaps.write('.'))
-        .pipe(plugins.plumber.stop())
-		.pipe(gulp.dest(config.typescript.tscOutputPath));
+        .src(config.fontSource)
+        .pipe(gulp.dest(config.distFonts));
 });
 
-gulp.task('babel', () => {
+gulp.task('build-images', () => {
     return gulp
-        .src(config.babel.es6source)
-        // .pipe(plugins.babel())
-        .pipe(plugins.browserify())
-        .pipe(plugins.rename(config.babel.output))
-		.pipe(gulp.dest(config.babel.es5dest));
+        .src(config.fontSource)
+        .pipe(gulp.dest(config.buildFonts));
 });
 
-gulp.task('build', ['minify-css', 'minify-js', 'move-fonts'], () => {
+gulp.task('dist-images', () => {
+    return gulp
+        .src(config.imgSource)
+        .pipe(gulp.dest(config.distImages));
+});
+
+gulp.task('build-styles', () => {
+    return gulp
+        .src(config.cssSource)
+        .pipe(gulp.dest(config.buildStyles));
+});
+
+gulp.task('dist-styles', ['minify-css']);
+
+gulp.task('dist-scripts', ['minify-js']);
+
+gulp.task('build', ['build-fonts', 'build-images', 'build-styles'], () => {
     return gulp
         .src(config.htmlSource)
         .pipe(plugins.inject(gulp.src(config.stylesheets, { read: false }), {
             addRootSlash: false,
+            ignorePath: config.buildOut,
         }))
         .pipe(plugins.inject(gulp.src(config.javascript, { read: false }), {
+            addRootSlash: false,
+            ignorePath: config.buildOut,
+        }))
+        .pipe(gulp.dest(config.buildIndex));
+});
+
+gulp.task('dist', ['dist-fonts', 'dist-images', 'dist-styles', 'dist-scripts'], () => {
+    return gulp
+        .src(config.htmlSource)
+        .pipe(plugins.inject(gulp.src(config.distStyleSheet, { read: false }), {
+            addRootSlash: false,
+        }))
+        .pipe(plugins.inject(gulp.src(config.distJavaScript, { read: false }), {
             addRootSlash: false,
         }))
         .pipe(gulp.dest(config.htmlDest));
 });
 
-gulp.task('serve-dev', () => {
+gulp.task('serve-build', ['build'], () => {
     browsersync.init({
-        server: { baseDir: './src/', index: 'index.html' },
+        server: { baseDir: './build/src/', index: 'index.html' },
         logLevel: 'debug',
-        logPrefix: '[PROFILE] - ',
+        logPrefix: '[BUILD] - ',
         open: false,
         reloadDelay: 2000,
         reloadDebounce: 2000,
@@ -119,10 +140,22 @@ gulp.task('serve-dev', () => {
         host: 'dev_svr',
     });
     gulp.watch(config.scssSource, ['compass-compile']);
-    gulp.watch(config.typescript.tscSourcePath).on('change', ['compile-src']);
-    gulp.watch(config.scriptSource).on('change', browsersync.reload);
-    gulp.watch(config.htmlSource).on('change', browsersync.reload);
-    gulp.watch(config.devStyles).on('change', browsersync.reload);
+    gulp.watch(config.buildScript).on('change', browsersync.reload);
+    gulp.watch(config.buildIndex).on('change', browsersync.reload);
+    gulp.watch(config.buildStyles).on('change', browsersync.reload);
 });
 
-gulp.task('default', ['build']);
+gulp.task('serve-dist', ['dist'], () => {
+    browsersync.init({
+        server: { baseDir: './', index: 'index.html' },
+        logLevel: 'debug',
+        logPrefix: '[DIST] - ',
+        open: false,
+        reloadDelay: 2000,
+        reloadDebounce: 2000,
+        injectChanges: true,
+        host: 'dev_svr',
+    });
+});
+
+gulp.task('default', ['serve-build']);
