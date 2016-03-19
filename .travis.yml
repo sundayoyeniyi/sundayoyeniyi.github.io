@@ -1,0 +1,20 @@
+# Travis CI documentation is here - http://docs.travis-ci.com
+
+git:
+  depth: 5
+
+language: node_js
+
+node_js:
+  - "4"
+
+before_script:
+    - git config --global user.name SundayOyeniyi
+
+notifications:
+  email: true
+
+install:
+  - npm install
+
+sudo: false

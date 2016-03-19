@@ -11,6 +11,7 @@
   "scripts": {
     "clean": "rm -rf build",
     "br-dir": "mkdir -p build/src/scripts",
+    "test": "Echo browser test in progress ... WIP",
     "build:tsc": "tsc",
     "build:babel": "babel build/src/typescripts --out-dir build/src/amd-scripts",
     "build:browserify": "browserify build/src/amd-scripts/index.js > build/src/scripts/bundle.js",
