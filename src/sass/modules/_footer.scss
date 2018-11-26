@@ -5,7 +5,7 @@ footer {
     color: #fff;
     border-top: thick solid $brandcomplimentarycolor;
     background-color: $brandcolor;
-    @include border-bottom-radius();
+    border-bottom-right-radius: 5px;
     div:first-child {
         float: left;
     }
