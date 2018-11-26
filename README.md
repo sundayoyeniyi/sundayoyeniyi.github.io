@@ -10,18 +10,10 @@ This profile project started as an Angular project in the past but have decided 
 
 | No | Tasks  | Status   |
 |----|--------|----------|
-| 1  | Add webpack configuration file | Todo   |
-| 2  | Create/re-arrange folder structure to match webpack config | Todo   |
-| 3  | Remove TypeScript and angular related workflow toolings  | Todo   |
-| 4  | Start adding react libraries  | Todo  |
-| 5  | Add & configure Jest & Enzyme for TDD  | Todo   |
-| 6  | Create components from existing index page | Todo   |
-| 7  | Brand logo in svg (scripting SVG or just in CSS)  | Todo   |
-| 8  | Refactor sass file into module files (container, header, article, aside, footer)  | Todo   |
-| 9  | Develop aside area contents (current time, HTML5, CSS3, JavaScript and NodeJS logos all in scripted SVG formats)  | Todo   |
-| 10  | Develop layouts for tablets and desktops (grids +  RWD)  | Todo   |
-| 11  | Refactor codebase to client and server mode and host server on heroku.  | To do  |
-| 12  | Refactor page into dynamic contents coming from API back end  | To do   |
-| 13  | Generate favicon for site from brand logo  | To do   |
-| 14 | Implement Autotrack for Google Analytics for improved insights see [Autotrack blog post](http://googledevelopers.blogspot.co.uk/2016/02/introducing-autotrack-for-analyticsjs.html?utm_source=javascriptweekly&utm_medium=email) and [project on github](https://github.com/googleanalytics/autotrack) | To do   |
-| 15  | Change README documentation to document project and not task lists  | To do   |
+| 1  | Develop aside area contents (current time, HTML5, CSS3, JavaScript and NodeJS logos all in scripted SVG formats)  | Todo   |
+| 2  | Develop layouts for tablets and desktops (grids +  RWD)  | Todo   |
+| 3  | Refactor codebase to client and server mode and host server on heroku.  | To do  |
+| 4  | Refactor page into dynamic contents coming from API back end  | To do   |
+| 5  | Generate favicon for site from brand logo  | To do   |
+| 6 | Implement Autotrack for Google Analytics for improved insights see [Autotrack blog post](http://googledevelopers.blogspot.co.uk/2016/02/introducing-autotrack-for-analyticsjs.html?utm_source=javascriptweekly&utm_medium=email) and [project on github](https://github.com/googleanalytics/autotrack) | To do   |
+| 7  | Change README documentation to document project and not task lists  | To do   |
