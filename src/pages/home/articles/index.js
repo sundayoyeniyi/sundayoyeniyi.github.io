@@ -4,9 +4,10 @@ import data from '../../../data/data';
 
 class Articles extends React.Component {
     render() {
+        const articles = data;
         return (
             <article>
-                {data.map(article => <Article
+                {articles.map(article => <Article
                     source={article.src}
                     title={article.title}
                     description={article.description}
