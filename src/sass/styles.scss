@@ -1,10 +1,8 @@
-@import "partials/reset";
-@import "plugins/compass";
-@import "plugins/susy_plugin";
-@import "plugins/breakpoint_plugin";
+@import "vendor/normalize";
 @import "partials/variables";
-@import "partials/font-family";
+@import "partials/functions";
 @import "partials/mixins";
+@import "partials/font-family";
 
 @import "modules/body-container";
 @import "modules/header";

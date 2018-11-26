@@ -18,8 +18,8 @@ hgroup {
             height: 40px * 1.618;
             padding: 5px;
             margin: 0 auto 0 auto;
-            @include border-radius(50%);
-            @include rotateZ(-45deg);
+            border-radius: 50%;
+            transform: rotate(-45deg);
             background-color: $brandcolor;
             color: $brandcomplimentarycolor;
             span {
@@ -30,7 +30,7 @@ hgroup {
                 background-color: #fff;
                 color: $brandcomplimentarycolor;
                 border: 2px * 1.618 solid $brandcolor;
-                @include rotateZ(-90deg);
+                transform: rotate(-90deg);
             }
         }
     h1 {

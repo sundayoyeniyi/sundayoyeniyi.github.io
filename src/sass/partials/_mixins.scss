@@ -2,5 +2,73 @@
 @mixin vertical-align($position: relative) {
   position: $position;
   top: 50%;
- @include translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* font-face mixin */
+@mixin font-face($font-name, $font-files, $eot: false, $weight: false, $style: false) {
+  @font-face {
+    font-family: quote($font-name);
+    @if $eot {
+      $iefont: unquote("#{$eot}?#iefix");
+      src: font-url($eot);
+      $font-files: $iefont eot, $font-files;
+    }
+
+    $urls: '';
+    @each $font in $font-files {
+      @if quote(eot) == quote(nth($font, 2)) {
+        $urls: append($urls, font-url(nth($font,1)) unquote("format('embedded-opentype')"), 'comma')
+      }
+      @if quote(woff) == quote(nth($font, 2)) {
+        $urls: append($urls, font-url(nth($font,1)) unquote("format('woff')"), 'comma')
+      }
+      @if quote(ttf) == quote(nth($font, 2)) {
+        $urls: append($urls, font-url(nth($font,1)) unquote("format('truetype')"), 'comma')
+      }
+      @if quote(svg) == quote(nth($font, 2)) {
+        $urls: append($urls, font-url(nth($font,1)) unquote("format('svg')"), 'comma')
+      }
+    }
+    src: $urls;
+    @if $weight {
+      font-weight: $weight;
+    }
+    @if $style {
+      font-style: $style;
+    }
+  }
+}
+
+/* underline a link only when on hover adapted from compass mixin*/
+@mixin hover-link {
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+
+/* set the colors for link - adapted from compass mixin */
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+  color: $normal;
+  @if $visited {
+    &:visited {
+      color: $visited;
+    }
+  }
+  @if $focus {
+    &:focus {
+      color: $focus;
+    }
+  }
+  @if $hover {
+    &:hover {
+      color: $hover;
+    }
+  }
+  @if $active {
+    &:active {
+      color: $active;
+    }
+  }
 }
