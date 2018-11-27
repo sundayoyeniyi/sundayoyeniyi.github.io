@@ -1,4 +1,4 @@
-import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+import React from 'react';
 import Article from './article';
 import data from '../../../data/data';
 
