@@ -4,9 +4,9 @@
   "description": "Github profile page",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development --inline",
+    "dev": "webpack-dev-server --config ./webpack.config.js --mode development --inline",
     "build": "webpack --config ./webpack.config.js --mode production",
-    "serve": "yarn run build && browser-sync start --server 'dist' --browser 'google chrome'",
+    "start": "npm run build && node_modules/http-server/bin/http-server dist -d false --robots",
     "test": "jest"
   },
   "repository": {
@@ -24,8 +24,7 @@
     "url": "https://github.com/sundayoyeniyi/sundayoyeniyi.github.io/issues"
   },
   "homepage": "https://github.com/sundayoyeniyi/sundayoyeniyi.github.io#readme",
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.6",
@@ -49,16 +48,19 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "node-sass": "^4.10.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-hot-loader": "^4.3.12",
-    "react-router-dom": "^4.3.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "http-server": "^0.11.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-hot-loader": "^4.3.12",
+    "react-router-dom": "^4.3.1"
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Header from './../index';
+import Header from '../index';
 
 describe('Header component test', () => {
     let wrapper;
@@ -13,7 +13,5 @@ describe('Header component test', () => {
         expect(wrapper.find('header')).toHaveLength(1);
         expect(wrapper.find('header').find('hgroup')).toHaveLength(1);
         expect(wrapper.find('header').find('hgroup').find('div')).toHaveLength(2);
-
-    })
-
-})
+    });
+});
