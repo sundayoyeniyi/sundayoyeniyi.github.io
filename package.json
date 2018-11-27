@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config ./webpack.config.js --mode development --inline",
     "build": "webpack --config ./webpack.config.js --mode production",
-    "start": "npm run build && node_modules/http-server/bin/http-server dist -d false --robots",
+    "start": "yarn run build && node_modules/http-server/bin/http-server dist -d false --robots",
     "test": "jest"
   },
   "repository": {
