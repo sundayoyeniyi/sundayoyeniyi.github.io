@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Article from './../article';
+import Article from '../article';
 
 describe('Article component test', () => {
     let wrapper;
@@ -11,7 +11,7 @@ describe('Article component test', () => {
     };
 
     beforeAll(() => {
-        wrapper = shallow(<Article { ...sampleArticle } />)
+        wrapper = shallow(<Article {...sampleArticle} />);
     });
 
     it('expect title props to be rendered as first anchor text', () => {
@@ -25,4 +25,4 @@ describe('Article component test', () => {
     it('expect description props to be rendered as first parapgraph text', () => {
         expect(wrapper.find('p').at(0).text()).toBe('test-description');
     });
-})
+});

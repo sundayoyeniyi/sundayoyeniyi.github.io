@@ -10,7 +10,7 @@ class Articles extends React.Component {
                 {articles.map(article => <Article
                     source={article.src}
                     title={article.title}
-                    description={article.description}
+                    escription={article.description}
                     key={article.src}
                 />)}
             </article>
