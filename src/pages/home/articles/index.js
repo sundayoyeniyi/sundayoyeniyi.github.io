@@ -1,16 +1,15 @@
-import React from 'react';
+import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import Article from './article';
 import data from '../../../data/data';
 
 class Articles extends React.Component {
     render() {
-        const articles = data;
         return (
             <article>
-                {articles.map(article => <Article
+                {data.map(article => <Article
                     source={article.src}
                     title={article.title}
-                    escription={article.description}
+                    description={article.description}
                     key={article.src}
                 />)}
             </article>
