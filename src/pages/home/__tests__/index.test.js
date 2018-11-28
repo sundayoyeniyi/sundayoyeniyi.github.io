@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Home from './../index';
-import Header from './../header';
-import Articles from './../articles';
-import Footer from './../footer';
+import Home from '../index';
+import Header from '../header';
+import Articles from '../articles';
+import Footer from '../footer';
 
 describe('Home component UI test', () => {
     let wrapper;
