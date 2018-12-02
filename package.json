@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config ./webpack.config.js --mode development --inline",
-    "build": "webpack --config ./webpack.config.js --mode production",
-    "start": "yarn run build && node_modules/http-server/bin/http-server dist -d false --robots -p $PORT",
+    "build": "webpack --config ./webpack.config.js --mode production && cp public/robots.txt dist/robots.txt",
+    "start": "yarn run build && node_modules/http-server/bin/http-server dist -d false --robots",
     "test": "jest"
   },
   "repository": {
