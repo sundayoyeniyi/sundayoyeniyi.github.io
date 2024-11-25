@@ -1,7 +1,0 @@
-# exclude files/folders from repo
-node_modules
-.sass-cache
-*.log
-build/
-dist/
-coverage
