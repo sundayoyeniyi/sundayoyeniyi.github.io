@@ -5,11 +5,6 @@ A product lifecycle Software Engineer & Architect
 - Operation & support
 - Decommission
 
-- Ideation
-- Development & go-live
-- Operation & support
-- Decommission
-
 ## Technologies
 
 - Java & Spring Boot
