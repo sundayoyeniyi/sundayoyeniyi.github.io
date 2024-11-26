@@ -14,3 +14,4 @@ A Software Engineer
 - IDEA & Vim
 - Agile & Scrum
 - AI? & ???
+- Mac OS & Linux
