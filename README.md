@@ -1,5 +1,10 @@
 A product lifecycle Software Engineer
 
+- Ideation
+- Development & go-live
+- Operation & support
+- Decommission
+
 ## Technologies
 
 - Java & Spring Boot
