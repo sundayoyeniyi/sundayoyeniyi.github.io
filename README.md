@@ -1,4 +1,9 @@
-A product lifecycle Software Engineer
+A product lifecycle Software Engineer & Architect
+
+- Ideation
+- Development & go-live
+- Operation & support
+- Decommission
 
 - Ideation
 - Development & go-live
@@ -16,5 +21,5 @@ A product lifecycle Software Engineer
 - Git & GitHub
 - IDEA & Vim
 - Agile & Scrum
-- AI? & ???
 - Mac OS & Linux
+- AI? & ???
