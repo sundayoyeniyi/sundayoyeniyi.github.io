@@ -1,6 +1,4 @@
-# Sunday Oyeniyi
-
-A Software Engineer
+A product lifecycle Software Engineer
 
 ## Technologies
 
